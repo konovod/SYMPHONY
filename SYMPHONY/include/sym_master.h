@@ -19,6 +19,7 @@
 
 #include <stdio.h>
 
+
 #include "symphony.h"
 #include "sym_types.h"
 #include "sym_macros.h"
@@ -164,4 +165,12 @@ int check_feasibility_new_rhs PROTO((bc_node * node, MIPdesc * mip,
 					int cnt, int *ind, double *val));
 int trim_warm_tree PROTO((sym_environment *env, bc_node *n));
 void free_master PROTO((sym_environment *env));
+
+#define printf my_printf
+
+static inline void my_printf(...){}
+
+
 #endif
+
+
