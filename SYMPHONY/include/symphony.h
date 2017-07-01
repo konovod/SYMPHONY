@@ -191,6 +191,11 @@ typedef struct SYM_ENVIRONMENT sym_environment;
 /*===================== Interface functions (master.c) ======================*/
 /*===========================================================================*/
 
+#ifdef __cplusplus
+  extern "C" {
+  #endif
+
+
 void sym_version PROTO((void));
 sym_environment *sym_open_environment PROTO((void));
 int sym_close_environment PROTO((sym_environment *env));
@@ -324,5 +329,10 @@ sym_environment * sym_create_copy_environment PROTO((sym_environment *env));
 
 int sym_test PROTO((sym_environment *env, int argc, char **argv,
 		    int *test_status));
+
+#ifdef __cplusplus
+}
+  #endif
+
 
 #endif
